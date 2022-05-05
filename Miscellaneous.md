@@ -38,3 +38,5 @@ function checkObj(checkProp) {
 console.log(checkObj("gift")); // "pony"
 console.log(checkObj("random")); // "Not Found"
 ```
+
+## Difference between For and ForEach Statement

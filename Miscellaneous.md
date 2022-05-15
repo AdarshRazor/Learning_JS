@@ -40,3 +40,26 @@ console.log(checkObj("random")); // "Not Found"
 ```
 
 ## Difference between For and ForEach Statement
+
+## Prevent Object Mutation - Object.freeze()
+
+```js
+function freezeObj() {
+  "use strict";
+  const MATH_CONSTANTS = {
+    PI: 3.14
+  };
+  
+  Object.freeze(MATH_CONSTANTS); // This will prevent any changes to the object.
+  
+  try {
+    MATH_CONSTANTS.PI = 99; // This will throw an error in strict mode.
+  } catch (ex) {
+    console.log(ex);
+  }
+  return MATH_CONSTANTS.PI;
+}
+
+const PI = freezeObj();
+console.log(PI); // 3.14
+```
